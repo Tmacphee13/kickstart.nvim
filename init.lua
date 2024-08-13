@@ -917,3 +917,11 @@ require('lazy').setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+-- set :Ex keymap to <leader>sl
+vim.api.nvim_set_keymap('n', '<leader>sl', ':Ex<CR>', { noremap = true, silent = true })
+
+-- set keymaps for buffer navigation and deletion
+vim.api.nvim_set_keymap('n', '<leader>n', ':bnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>p', ':bprevious<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>d', ':bdelete<CR>', { noremap = true, silent = true })
